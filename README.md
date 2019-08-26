@@ -30,3 +30,13 @@ Install all javascript dependencies:
 ``` bash
 npm install
 ```
+
+### Deploy
+
+``` bash
+heroku apps:create -a my-app
+heroku buildpacks:set heroku/python
+heroku buildpacks:add --index 1 heroku/nodejs
+
+git push heroku master
+```
