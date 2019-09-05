@@ -20,5 +20,5 @@ from django_react.views import FrontendAppView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # have it as the last urlpattern for BrowserHistory urls to work
-    re_path(r'^', views.FrontendAppView.as_view()),
+    re_path(r'^', FrontendAppView.as_view()),
 ]

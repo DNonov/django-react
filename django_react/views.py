@@ -1,7 +1,7 @@
 import os
 import logging
 from django.http import HttpResponse
-from django.views.generic import views
+from django.views.generic import View
 
 
 class FrontendAppView(View):
@@ -9,7 +9,7 @@ class FrontendAppView(View):
     Serves the frontend react entry point.
     """
 
-    index_file_path = os.join('build', 'index.html')
+    index_file_path = os.path.join('build', 'index.html')
 
     def get(self, request):
         try:
