@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from django_react.views import FrontendAppView
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # have it as the last urlpattern for BrowserHistory urls to work
-    re_path(r'^', FrontendAppView.as_view()),
+    re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 ]
