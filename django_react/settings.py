@@ -23,7 +23,7 @@ DEBUG = os.getenv('DEBUG')
 
 HOST = os.getenv('HOST')
 
-ALLOWED_HOSTS = [HOST, '127.0.0.1:8000']
+ALLOWED_HOSTS = [HOST, '127.0.0.1:8000', 'localhost']
 
 
 # Application definition
